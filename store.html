@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>AuraMC | STORE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            color: white;
+        }
+
+        /* خلفية الفيديو */
+        #bg-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: -2;
+            object-fit: cover;
+        }
+
+        /* Overlay لتعتيم الفيديو */
+        #bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            backdrop-filter: blur(2px);
+            z-index: -1;
+        }
+
+        nav {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            top: 10px;
+            position: sticky;
+            padding: 8px 20px!important;
+        }
+
+        a {
+            color: white!important;
+            font-size: 20px!important;
+        }
+
+        .navbar-toggler {
+            border: none;
+            outline: none;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+        section {
+            height: calc(100vh - 70px);
+        }
+
+        section > p {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .active{
+            color: #00ff00!important;
+        }
+        .row{
+            width: 70%;
+        }
+        .box{
+            border: 1px solid #007700;
+            border-radius: 8px;
+            padding: 6px 2px;
+            margin-top: 8px;
+            height: 290px;
+        }
+        .itemName{
+            color: #00ff00;
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .price{
+            color: #00ff00;
+            font-size: 22px;
+        }
+        button{
+            background-color: #007700;
+            outline: none;
+            border: 1px solid white;
+            color: white;
+            padding: 4px 16px;
+            border-radius: 18px;
+        }
+        a{
+            text-decoration: none;
+        }
+        section img{
+            width: 50%;
+        }
+        nav{
+            top: 10px;
+        }
+        .srvImg{
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- الفيديو -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="https://r2.guns.lol/dcd0e93e-a503-4743-941e-815433cb2be5.mp4" type="video/mp4">
+    </video>
+    <div id="bg-overlay"></div>
+
+    <div class="container sticky-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img class="srvImg" src="Store IMGS/aura.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="ranks.html">RANKS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ms-sm-0 ms-md-0 active" href="store.html">STORE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ms-4 ms-sm-0 ms-md-0" href="https://discord.gg/WZxpKeJXYb" target="_blank">SUPPORT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <section class="d-flex justify-content-center py-5">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="box">
+                    <div class="image d-flex justify-content-center">
+                        <img src="Store IMGS/store/pickaxe.png" alt="">
+                    </div>
+                    <p class="itemName text-center mt-2">Super pickaxe</p>
+                    <p class="price text-center">1.5$</p>
+                    <a class="d-flex justify-content-center" href="https://discord.gg/WZxpKeJXYb" target="_blank">
+                        <button class="mb-3">ORDER</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="box">
+                    <div class="image d-flex justify-content-center">
+                        <img src="Store IMGS/store/axe.png" alt="">
+                    </div>
+                    <p class="itemName text-center mt-2">Super axe</p>
+                    <p class="price text-center">1$</p>
+                    <a class="d-flex justify-content-center" href="https://discord.gg/WZxpKeJXYb" target="_blank">
+                        <button class="mb-3">ORDER</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="box">
+                    <div class="image d-flex justify-content-center">
+                        <img src="Store IMGS/store/shovel.png" alt="">
+                    </div>
+                    <p class="itemName text-center mt-2">Super shovel</p>
+                    <p class="price text-center">0.75$</p>
+                    <a class="d-flex justify-content-center" href="https://discord.gg/WZxpKeJXYb" target="_blank">
+                        <button class="mb-3">ORDER</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="box">
+                    <div class="image d-flex justify-content-center">
+                        <img src="Store IMGS/store/elytra.png" alt="">
+                    </div>
+                    <p class="itemName text-center mt-2">Super elytra</p>
+                    <p class="price text-center">2$</p>
+                    <a class="d-flex justify-content-center" href="https://discord.gg/WZxpKeJXYb" target="_blank">
+                        <button class="mb-3">ORDER</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="box">
+                    <div class="image d-flex justify-content-center">
+                        <img src="Store IMGS/store/hoe.png" alt="">
+                    </div>
+                    <p class="itemName text-center mt-2">Super hoe</p>
+                    <p class="price text-center">0.5$</p>
+                    <a class="d-flex justify-content-center" href="https://discord.gg/WZxpKeJXYb" target="_blank">
+                        <button class="mb-3">ORDER</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="box">
+                    <div class="image d-flex justify-content-center">
+                        <img src="Store IMGS/store/helmet.png" alt="">
+                    </div>
+                    <p class="itemName text-center mt-2">Super helmet</p>
+                    <p class="price text-center">0.75$</p>
+                    <a class="d-flex justify-content-center" href="https://discord.gg/WZxpKeJXYb" target="_blank">
+                        <button class="mb-3">ORDER</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="box">
+                    <div class="image d-flex justify-content-center">
+                        <img src="Store IMGS/store/chestplate.png" alt="">
+                    </div>
+                    <p class="itemName text-center mt-2">Super chestplate</p>
+                    <p class="price text-center">1$</p>
+                    <a class="d-flex justify-content-center" href="https://discord.gg/WZxpKeJXYb" target="_blank">
+                        <button class="mb-3">ORDER</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="box">
+                    <div class="image d-flex justify-content-center">
+                        <img src="Store IMGS/store/leggings.png" alt="">
+                    </div>
+                    <p class="itemName text-center mt-2">Super leggings</p>
+                    <p class="price text-center">1$</p>
+                    <a class="d-flex justify-content-center" href="https://discord.gg/WZxpKeJXYb" target="_blank">
+                        <button class="mb-3">ORDER</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="box">
+                    <div class="image d-flex justify-content-center">
+                        <img src="Store IMGS/store/boots.png" alt="">
+                    </div>
+                    <p class="itemName text-center mt-2">Super boots</p>
+                    <p class="price text-center">0.75$</p>
+                    <a class="d-flex justify-content-center" href="https://discord.gg/WZxpKeJXYb" target="_blank">
+                        <button class="mb-3">ORDER</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="box">
+                    <div class="image d-flex justify-content-center">
+                        <img src="Store IMGS/store/sword.png" alt="">
+                    </div>
+                    <p class="itemName text-center mt-2">Super sword</p>
+                    <p class="price text-center">1.5$</p>
+                    <a class="d-flex justify-content-center" href="https://discord.gg/WZxpKeJXYb" target="_blank">
+                        <button class="mb-3">ORDER</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="box">
+                    <div class="image d-flex justify-content-center">
+                        <img src="Store IMGS/store/book.png" alt="">
+                    </div>
+                    <p class="itemName text-center mt-2">Unbreakable</p>
+                    <p class="price text-center">0.5$</p>
+                    <a class="d-flex justify-content-center" href="https://discord.gg/WZxpKeJXYb" target="_blank">
+                        <button class="my-3">ORDER</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="box">
+                    <div class="image d-flex justify-content-center">
+                        <img src="Store IMGS/store/core.png" alt="">
+                    </div>
+                    <p class="itemName text-center mt-2">Super core</p>
+                    <p class="price text-center">0.5$</p>
+                    <a class="d-flex justify-content-center" href="https://discord.gg/WZxpKeJXYb" target="_blank">
+                        <button class="mb-3">ORDER</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="box">
+                    <div class="image d-flex justify-content-center">
+                        <img src="Store IMGS/store/lootboxItem.jpg" alt="">
+                    </div>
+                    <p class="itemName text-center mt-2">Basic Crate</p>
+                    <p class="price text-center">0.25$</p>
+                    <a class="d-flex justify-content-center" href="https://discord.gg/WZxpKeJXYb" target="_blank">
+                        <button class="mb-3">ORDER</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="box">
+                    <div class="image d-flex justify-content-center">
+                        <img src="Store IMGS/store/lootboxItem.jpg" alt="">
+                    </div>
+                    <p class="itemName text-center mt-2">Epic Crate</p>
+                    <p class="price text-center">0.5$</p>
+                    <a class="d-flex justify-content-center" href="https://discord.gg/WZxpKeJXYb" target="_blank">
+                        <button class="mb-3">ORDER</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="box">
+                    <div class="image d-flex justify-content-center">
+                        <img src="Store IMGS/store/lootboxItem.jpg" alt="">
+                    </div>
+                    <p class="itemName text-center mt-2">Legendry Crate</p>
+                    <p class="price text-center">0.75$</p>
+                    <a class="d-flex justify-content-center" href="https://discord.gg/WZxpKeJXYb" target="_blank">
+                        <button class="mb-3">ORDER</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
