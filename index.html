@@ -88,6 +88,7 @@
     }
     .srvImg{
       width: 30px;
+      scale: 2;
     }
   </style>
 </head>
@@ -101,7 +102,7 @@
   <div class="container">
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"><img class="srvImg" src="Store IMGS/aura.png" alt=""></a>
+        <a class="navbar-brand" href="index.html"><img class="srvImg" src="images/server.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -155,7 +156,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script>
   const ip = "AuraMc.pro";
-  const port = "25567";
+  const port = "25566";
   const apiURL = `https://api.mcsrvstat.us/2/${ip}:${port}`;
 
   fetch(apiURL)
